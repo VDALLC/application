@@ -1,0 +1,25 @@
+{
+    "name": "vda/application",
+    "type": "library",
+    "description": "Application framework",
+    "keywords": ["application"],
+    "require": {
+        "php": ">=5.3.23",
+        "vda/cli": "self.version",
+        "vda/config": "self.version",
+        "vda/dependency-injection": "self.version",
+        "vda/mvc": "self.version",
+        "vda/ui": "self.version",
+        "vda/util": "self.version"
+    },
+    "autoload": {
+        "psr-0": { "": "" }
+    },
+    "target-dir": "Vda/App",
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-trunk": "1-dev"
+        }
+    }
+}
