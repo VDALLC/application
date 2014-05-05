@@ -5,12 +5,12 @@
     "keywords": ["application"],
     "require": {
         "php": ">=5.3.23",
-        "vda/cli": "self.version",
-        "vda/config": "self.version",
-        "vda/dependency-injection": "self.version",
-        "vda/mvc": "self.version",
-        "vda/ui": "self.version",
-        "vda/util": "self.version"
+        "vda/cli": "0.11.*",
+        "vda/config": "0.11.*",
+        "vda/dependency-injection": "0.11.*",
+        "vda/mvc": "0.11.*",
+        "vda/ui": "0.11.*",
+        "vda/util": "0.11.*"
     },
     "autoload": {
         "psr-0": { "": "" }
