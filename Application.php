@@ -222,7 +222,10 @@ class Application
     {
         switch (ApplicationContext::get()->getFrontend()) {
             case self::FRONTEND_WEB:
-                header(Response::getStatusLine($e->getCode() ?: 500));
+                header(Response::getStatusLine(
+                    Response::isValidStatus($e->getCode()) ? $e->getCode() : 500
+                ));
+
                 echo $this->getClientMessage($e), "<br/>\n";
 
                 if ($this->config->getBool('debug/enable')) {
