@@ -12,7 +12,7 @@ use Vda\Http\Request;
 use Vda\Ui\Message\IMessage;
 use Vda\Ui\Message\DictionaryMessage as M;
 
-class Application
+abstract class Application
 {
     const FRONTEND_CLI = 0;
     const FRONTEND_WEB = 1;
@@ -143,16 +143,13 @@ class Application
         }
     }
 
-    protected function dispatchWebRequest()
-    {
-        $request = Request::createFromGlobals();
-
-        foreach ($routs as $rout) {
-            if ($rout->isMatch($request)) {
-                $rout->handle($request);
-            }
-        }
-    }
+    /**
+     * Handle request.
+     *
+     * Override this using vda\mvc.
+     *
+     */
+    abstract protected function dispatchWebRequest();
 
     protected function dispatchCliRequest()
     {
