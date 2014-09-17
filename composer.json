@@ -8,7 +8,7 @@
         "vda/cli": "0.11.*",
         "vda/config": "0.11.*",
         "vda/dependency-injection": "0.11.*",
-        "vda/ui": "0.11.*, 0.12.*",
+        "vda/ui": "0.11.*|0.12.*",
         "vda/util": "0.11.*"
     },
     "autoload": {
